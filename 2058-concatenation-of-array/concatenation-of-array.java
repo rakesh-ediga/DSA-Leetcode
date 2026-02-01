@@ -1,0 +1,20 @@
+class Solution {
+    //array Leet
+    public int[] getConcatenation(int[] nums) {
+        int n = nums.length;
+
+        int[] ans = new int[2 * n];
+
+        // first copy
+        for (int i = 0; i < n; i++) {
+            ans[i] = nums[i];
+        }
+
+        // second copy
+        for (int i = 0; i < n; i++) {
+            ans[i + n] = nums[i];
+        }
+
+        return ans;
+    }
+}
